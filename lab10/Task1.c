@@ -9,6 +9,13 @@ int fa(double x) {
 	return y;
 }
 
+int fb(double x) {
+	double y = 0;
+	y = cos(x) - 2 * x; // function - f(x) = cos(x) - 2x
+
+	return y;
+}
+
 int main() {
 
 	return 0;
