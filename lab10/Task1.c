@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <locale.h> // russian language
 #include <math.h>
@@ -17,6 +18,13 @@ int fb(double x) {
 }
 
 int main() {
+	setlocale(LC_CTYPE, "RUS");
+
+	double x;
+	int option;
+
+	printf("¬ведите значение x -> ");
+	scanf("%d", &x);
 
 	return 0;
 }
