@@ -26,7 +26,10 @@ int main() {
 	printf("Введите значение x -> ");
 	scanf("%lf", &x);
 
-	printf("Значения функций: fa(x) = %lf; fb(x) = %lf", fa(x), fb(x));
+	printf("Значения функций: fa(x) = %lf; fb(x) = %lf\n", fa(x), fb(x));
+	printf("Произведение = %lf\n", fa(x) * fb(x));
+	printf("Разность квадратов = %lf\n", fa(x) * fa(x) - fb(x) * fb(x));
+	printf("Удвоенная сумма = %lf\n", 2 * (fa(x) + fb(x)));
 
 	return 0;
 }
