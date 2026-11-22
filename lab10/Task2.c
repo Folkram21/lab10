@@ -44,6 +44,9 @@ int main(void) {
     printf("¬ведите число членов р€да N: ");
     scanf("%d", &N);
 
+    printf("¬ведите точность eps: ");
+    scanf("%lf", &eps);
+
     printf("\n sin(%g)\n", x);
     printf("  N |       sin_n     |     отклонение\n");
     printf("----+-----------------+------------------\n");
