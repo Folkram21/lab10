@@ -3,15 +3,15 @@
 #include <locale.h> // russian language
 #include <math.h>
 
-int fa(double x) {
-	double y = 0;
+double fa(double x) {
+	double y;
 	y = sin(x) + x * x; // function - f(x) = sin(x) + x^2
 
 	return y;
 }
 
-int fb(double x) {
-	double y = 0;
+double fb(double x) {
+	double y;
 	y = cos(x) - 2 * x; // function - f(x) = cos(x) - 2x
 
 	return y;
@@ -24,7 +24,9 @@ int main() {
 	int option;
 
 	printf("Введите значение x -> ");
-	scanf("%d", &x);
+	scanf("%lf", &x);
+
+	printf("Значения функций: fa(x) = %lf; fb(x) = %lf", fa(x), fb(x));
 
 	return 0;
 }
