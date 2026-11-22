@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+п»ї#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <math.h>
 #include <locale.h>
@@ -38,17 +38,17 @@ int main(void) {
     double x, eps;
     int N, i;
 
-    printf("Введите значение x: ");
+    printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ x: ");
     scanf("%lf", &x);
 
-    printf("Введите число членов ряда N: ");
+    printf("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ С‡Р»РµРЅРѕРІ СЂСЏРґР° N: ");
     scanf("%d", &N);
 
-    printf("Введите точность eps: ");
+    printf("Р’РІРµРґРёС‚Рµ С‚РѕС‡РЅРѕСЃС‚СЊ eps: ");
     scanf("%lf", &eps);
 
     printf("\n sin(%g)\n", x);
-    printf("  N |       sin_n     |     отклонение\n");
+    printf("  N |       sin_n     |     РѕС‚РєР»РѕРЅРµРЅРёРµ\n");
     printf("----+-----------------+------------------\n");
     for (i = 1; i <= N; i++) {
         double sn = sin_n(x, i);
