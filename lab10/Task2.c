@@ -44,5 +44,14 @@ int main(void) {
     printf("Введите число членов ряда N: ");
     scanf("%d", &N);
 
+    printf("\n sin(%g)\n", x);
+    printf("  N |       sin_n     |     отклонение\n");
+    printf("----+-----------------+------------------\n");
+    for (i = 1; i <= N; i++) {
+        double sn = sin_n(x, i);
+        double dev = sn - sin(x);
+        printf("%3d | %15.4f | %+.4e\n", i, sn, dev);
+    }
+
     return 0;
 }
