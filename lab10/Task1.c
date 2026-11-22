@@ -26,10 +26,42 @@ int main() {
 	printf("Введите значение x -> ");
 	scanf("%lf", &x);
 
-	printf("Значения функций: fa(x) = %lf; fb(x) = %lf\n", fa(x), fb(x));
-	printf("Произведение = %lf\n", fa(x) * fb(x));
-	printf("Разность квадратов = %lf\n", fa(x) * fa(x) - fb(x) * fb(x));
-	printf("Удвоенная сумма = %lf\n", 2 * (fa(x) + fb(x)));
+	do {
+		printf("\n\nВыберите подходящий вариант из списка:\n"
+			"1. Результат функции fa(x) = sin(x) + x^2\n"
+			"2. Результат функции fb(x) = cos(x) - 2x\n"
+			"3. Произведение fa(x) * fb(x)\n"
+			"4. Разность квадратов fa^2(x) - fb^2(x)\n"
+			"5. Удвоенная сумма 2*(fa(x)+fb(x))\n"
+			"0 - Выход\n\n");
+		printf("Введите номер варианта -> ");
+		scanf("%d", &option);
+
+		switch (option) {
+		case 0:
+			printf("\nЗавершение работы...\n");
+			break;
+		case 1:
+			printf("Значение функции: fa(x) = %lf\n", fa(x));
+			break;
+		case 2:
+			printf("Значение функции: fb(x) = %lf\n", fb(x));
+			break;
+		case 3:
+			printf("Произведение = %lf\n", fa(x) * fb(x));
+			break;
+		case 4:
+			printf("Разность квадратов = %lf\n", fa(x) * fa(x) - fb(x) * fb(x));
+			break;
+		case 5:
+			printf("Удвоенная сумма = %lf\n", 2 * (fa(x) + fb(x)));
+			break;
+		default:
+			printf("Неизвестный вариант. Пожалуйста, повторите попытку.\n");
+			break;
+		}
+
+	} while (option != 0);
 
 	return 0;
 }
